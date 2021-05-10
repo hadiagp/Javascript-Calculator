@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+
+function disp(val)
+{
+	document.getElementById("edu").value+=val
+}
+//function for evaluation
+function solve()
+{
+let x = document.getElementById("edu").value
+let y = eval(x)
+document.getElementById("edu").value = y
+}
+//function for clearing the display
+function clr()
+{
+document.getElementById("edu").value = ""
+}
+</script>
+
+<style>
+
+	@font-face {
+  	font-family: myFont;
+  	src: url(Kalameh_Bold.ttf);
+	}
+
+
+	body
+	{
+		background-image:url(michal-light.jpg);
+		font-family:myFont, Times, serif;
+		background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	}
+
+	table
+	{
+		margin-top: 100px;
+		background-color:rgba(173, 219, 230, 0);border-radius:10px;
+	}
+
+	input
+	{
+		background-color: rgba(46, 46, 46, 0.247);
+		color: rgb(255, 255, 255);
+		border-radius: 50%;
+		border: 0px solid black;
+		padding: 13px 20px;
+		margin: 4px 4px;
+		font-size: 20px;
+		box-shadow: 0px 0px 5px black;
+	}
+
+	input:hover
+	{
+		background-color: rgba(168, 168, 168, 0.692);
+		box-shadow: 0px 0px 11px black;
+	}
+
+</style>
+
+</head>
+
+<body align="center">
+
+	<h1> Mohammad Hadi Asgarpour - Web Task JavaScript Calculator</h1>
+
+	<hr>
+	
+	<table border="0" align="center">
+		<tr>
+			<td><input type="button" value="C" onclick="clr()" style="background-color:#F0A129;"/> </td>
+			
+			<td colspan="3"><input type="text" id="edu"/></td>
+		</tr>
+	<tr>
+	
+	<!-- creating buttons and assigning values-->
+	<td><input type="button" value="+" onclick="disp('+')"/> </td>
+	<td><input type="button" value="1" onclick="disp('1')"/> </td>
+	<td><input type="button" value="3" onclick="disp('2')"/> </td>
+	<td><input type="button" value="3" onclick="disp('3')"/> </td>
+	</tr>
+	<tr>
+	<td><input type="button" value="-" onclick="disp('-')"/> </td>
+	<td><input type="button" value="4" onclick="disp('4')"/> </td>
+	<td><input type="button" value="5" onclick="disp('5')"/> </td>
+	<td><input type="button" value="6" onclick="disp('6')"/> </td>
+	</tr>
+	<tr>
+	<td><input type="button" value="*" onclick="disp('*')"/> </td>
+	<td><input type="button" value="7" onclick="disp('7')"/> </td>
+	<td><input type="button" value="8" onclick="disp('8')"/> </td>
+	<td><input type="button" value="9" onclick="disp('9')"/> </td>
+	</tr>
+	<tr>
+	<td><input type="button" value="/" onclick="disp('/')"/> </td>
+	<td><input type="button" value="." onclick="disp('.')"/> </td>
+	<td><input type="button" value="0" onclick="disp('0')"/> </td>
+	<!-- Evaluating function call eval()-->
+	<td><input type="button" value="=" onclick="solve()" style="background-color:#2968f0;"/> </td>
+	</tr>
+	</table>
+</body>
+
+</html>
